@@ -1,27 +1,31 @@
-# 台股兵法智謀全媒體觀測系統
+# 台股兵法智謀全媒體觀測系統（GitHub Pages 版）
 
-這是已整理成 **GitHub 可管理的 Vite + React + TypeScript 專案**。
+這是可直接部署到 **GitHub Pages** 的版本，已完成以下調整：
 
-## 本機執行
+- `vite.config.ts` 已改成 `base: './'`
+- 已加入 GitHub Actions 自動部署設定
+- 推到 GitHub 後可直接用 **GitHub Pages** 發佈
+
+## 本機測試
 ```bash
 npm install
 npm run dev
 ```
 
-## 建置
+## 本機建置
 ```bash
 npm run build
 ```
 
-## 上傳 GitHub
+## 發佈到 GitHub Pages
 1. 建立新的 GitHub Repository
-2. 將整個專案資料夾內容上傳
-3. 若要部署到 Vercel / Netlify，可直接匯入此 Repository
-4. 若要部署到 GitHub Pages，建議再加上 Pages 部署流程或改用 Vercel 會更簡單
+2. 把本專案全部檔案上傳到 Repository 根目錄
+3. 到 GitHub 的 **Settings > Pages**
+4. 在 **Build and deployment** 選擇 **GitHub Actions**
+5. 確認預設分支為 `main`
+6. 之後每次 push 到 `main`，就會自動部署
 
-## 專案結構
+## 重要檔案
 - `src/App.tsx`：主畫面
-- `src/main.tsx`：React 入口
-- `src/index.css`：基本樣式
-- `index.html`：Vite 首頁
-- `package.json`：套件與指令
+- `vite.config.ts`：已設定 GitHub Pages 相對路徑
+- `.github/workflows/deploy-pages.yml`：自動部署流程

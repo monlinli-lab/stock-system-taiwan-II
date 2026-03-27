@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy-note": "Build the project, then upload the dist folder to GitHub Pages or use GitHub Actions"
   },
   "dependencies": {
     "lucide-react": "^0.542.0",
